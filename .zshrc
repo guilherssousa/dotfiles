@@ -76,7 +76,7 @@ source ~/.config/Repos/znap/znap.zsh  # Start Znap
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-npm-scripts-autocomplete)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,10 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$HOME/.cargo/env"
 
 # Znap Installs
+znap source zsh-users/zsh-syntax-highlighting
 znap source marlonrichert/zsh-autocomplete
 znap source MichaelAquilina/zsh-autoswitch-virtualenv
 
