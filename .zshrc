@@ -170,3 +170,6 @@ alias opl="netstat -tulpn | grep LISTEN"
 # add my special scripts folder to path
 export PATH="$PATH:$HOME/.scripts"
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
