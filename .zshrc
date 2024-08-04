@@ -150,9 +150,6 @@ eval "$(zoxide init zsh)"
 # alias nvim to vim
 alias vim=nvim
 
-#alias cat to batcat
-alias cat=batcat
-
 # alias nvim to vim
 alias vim=nvim
 
