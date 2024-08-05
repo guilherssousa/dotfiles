@@ -164,7 +164,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # command aliases
-alias tks="tmux kill-session"
+alias tks="tmux kill-server"
 alias opl="netstat -tulpn | grep LISTEN"
 
 # add my special scripts folder to path
