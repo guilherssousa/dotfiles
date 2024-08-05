@@ -3,7 +3,7 @@
 -- NOTE: You can change these options as you wish!
 
 -- Change guicursor
-vim.opt.guicursor = ''
+-- vim.opt.guicursor = ''
 
 -- Use relative line numbers
 vim.wo.relativenumber = true
