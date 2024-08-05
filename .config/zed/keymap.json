@@ -1,0 +1,11 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-k w": "pane::CloseActiveItem",
+      // scorll and center
+      "ctrl-d": ["vim::ScrollPageDown", "editor::ScrollCursorCenter"],
+      "ctrl-u": ["vim::ScrollPageUp", "editor::ScrollCursorCenter"]
+    }
+  }
+]
