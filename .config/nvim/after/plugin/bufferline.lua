@@ -10,3 +10,9 @@ require("bufferline").setup({
     separator_style = "thin",
   },
 })
+
+-- Map Alt+ 1-9 to switch buffers
+for i = 1, 9 do
+  vim.api.nvim_set_keymap('n', '<A-' .. i .. '>', ':BufferLineGoToBuffer ' .. i .. '<CR>',
+    { noremap = true, silent = true })
+end

@@ -45,8 +45,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
-vim.g.netrw_banner = 0
-
 -- [[ Basic formatting ]]
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2

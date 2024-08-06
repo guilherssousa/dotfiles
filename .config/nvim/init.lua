@@ -136,6 +136,9 @@ require('lazy').setup({
     after = { 'copilot.lua' },
   },
 
+  -- [[ Um netrw melhor ]]
+  'prichrd/netrw.nvim',
+
   -- [[ Frufru ]]
   'wakatime/vim-wakatime',
   'nvim-lualine/lualine.nvim',
