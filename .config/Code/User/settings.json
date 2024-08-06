@@ -2,4 +2,5 @@
   "workbench.colorTheme": "Solarized Osaka",
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative"
 }
