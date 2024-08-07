@@ -11,6 +11,7 @@ remap('n', '<leader>fe', vim.cmd.Ex, { desc = '[F]ile [E]xplorer' })
 
 -- [[ Buffer stuff ]]
 remap('n', '<leader>cf', ':bd<cr>', { desc = '[C]lose [F]ile (actually, the Buffer)', silent = true })
+remap('n', '<C-k><C-w>', ':bufdo bwipeout<cr>', { desc = 'Close all files', silent = true })
 
 -- [[ Terminal remaps ]]
 remap('n', '<leader>nt', ':terminal<cr>', { desc = '[N]ew [T]erminal window', silent = true })

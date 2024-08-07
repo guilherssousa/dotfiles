@@ -119,6 +119,9 @@ require('lazy').setup({
   'j-hui/fidget.nvim',
   'numToStr/Comment.nvim',
 
+  -- [[ Quickfix ]]
+  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
+
   -- [[ Harpoon ]]
   {
     'ThePrimeagen/harpoon',
