@@ -166,6 +166,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # command aliases
 alias tks="tmux kill-server"
 alias opl="netstat -tulpn | grep LISTEN"
+alias rsx="sudo service lightdm restart"
 
 # add my special scripts folder to path
 export PATH="$PATH:$HOME/.scripts"

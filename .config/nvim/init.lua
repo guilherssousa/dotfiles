@@ -148,6 +148,7 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   'akinsho/nvim-bufferline.lua',
   'stevearc/dressing.nvim',
+  'andweeb/presence.nvim',
 })
 
 require('set')
