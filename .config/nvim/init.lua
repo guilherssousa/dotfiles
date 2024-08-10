@@ -33,10 +33,6 @@ require('lazy').setup({
   -- make it transparent!
   'xiyaowong/transparent.nvim',
 
-  -- [[ git related ]]
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
-
   -- [[ format related ]]
   'tpope/vim-sleuth',
 
@@ -119,8 +115,11 @@ require('lazy').setup({
   'j-hui/fidget.nvim',
   'numToStr/Comment.nvim',
 
+  -- [[ Git related stuff ]]
+  { 'akinsho/git-conflict.nvim', version = "*", config = true },
+
   -- [[ Quickfix ]]
-  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
+  { 'kevinhwang91/nvim-bqf',     ft = 'qf' },
 
   -- [[ Harpoon ]]
   {
