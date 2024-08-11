@@ -169,6 +169,10 @@ alias opl="netstat -tulpn | grep LISTEN"
 alias rsx="sudo service lightdm restart"
 alias focus="sudo hostctl toggle focus"
 
+# Use neovim for man pages
+export MANPAGER="$(where vim) +Man!"
+export MANWIDTH=80
+
 # add my special scripts folder to path
 export PATH="$PATH:$HOME/.scripts"
 
