@@ -2,7 +2,6 @@ local wezterm = require 'wezterm'
 
 local config = {
   -- # Cosmetic Options (https://wezfurlong.org/wezterm/colorschemes/)
-  color_scheme = 'Rosé Pine (base16)',
   enable_tab_bar = false,
 
   -- # Font Options
@@ -34,5 +33,8 @@ local config = {
     }
   },
 }
+
+-- Set those stuff after object initialization for copy-paste reasons...
+config.color_scheme = 'Solarized Dark Higher Contrast'
 
 return config

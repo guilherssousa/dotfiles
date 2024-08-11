@@ -22,10 +22,10 @@ require('lazy').setup({
 
   -- [[ theme config ]]
   {
-    'rose-pine/neovim',
+    'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('rose-pine')
+      vim.cmd.colorscheme('kanagawa-dragon')
       -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
       -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
@@ -116,10 +116,10 @@ require('lazy').setup({
   'numToStr/Comment.nvim',
 
   -- [[ Git related stuff ]]
-  { 'akinsho/git-conflict.nvim', version = "*", config = true },
+  { 'akinsho/git-conflict.nvim', version = '*', config = true },
 
   -- [[ Quickfix ]]
-  { 'kevinhwang91/nvim-bqf',     ft = 'qf' },
+  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
 
   -- [[ Harpoon ]]
   {
