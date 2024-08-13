@@ -121,12 +121,6 @@ require('lazy').setup({
   -- [[ Quickfix ]]
   { 'kevinhwang91/nvim-bqf', ft = 'qf' },
 
-  -- [[ Harpoon ]]
-  {
-    'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
-  },
-
   -- [[ Copilot ]]
   {
     'zbirenbaum/copilot.lua',

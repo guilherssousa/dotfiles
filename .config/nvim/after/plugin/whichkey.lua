@@ -1,1 +1,5 @@
-require('which-key').setup({})
+local whichkey = require('which-key')
+
+whichkey.setup({
+  preset = 'modern',
+})

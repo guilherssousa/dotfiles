@@ -84,7 +84,7 @@ local servers = {
       'scss',
       'less',
       'svelte',
-      'astro'
+      'astro',
     },
   },
   -- lua_ls = {

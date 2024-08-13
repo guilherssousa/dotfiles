@@ -12,6 +12,9 @@ local config = {
 	window_background_opacity = 0.93,
 	win32_system_backdrop = "Acrylic",
 
+	-- # Dismiss annoying warning
+	warn_about_missing_glyphs = false,
+
 	-- # Keys configuration
 	keys = {
 		{
