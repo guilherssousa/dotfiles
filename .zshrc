@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export BROWSER=firefox
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME=robbyrussell
@@ -30,9 +31,10 @@ export GOPATH="$HOME/go"
 export PATH="/usr/local/go/bin:$GOPATH:$GOPATH/bin:/home/gui/.local/bin:$PATH"
 export WINTERMPATH="$HOME/.config/winterm"
 
+#nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#nvm end
 
 # pnpm
 export PNPM_HOME="/home/gui/.local/share/pnpm"

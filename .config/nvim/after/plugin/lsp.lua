@@ -63,7 +63,9 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local mason_lspconfig = require('mason-lspconfig')
 
 local servers = {
-  -- clangd = {},
+  clangd = {
+    cmd = { 'clangd', '--offset-encoding=utf-16' },
+  },
   -- gopls = {},
   html = {},
   pyright = {},
@@ -115,6 +117,7 @@ mason_lspconfig.setup_handlers({
       on_attach = on_attach,
       settings = servers[server_name],
       filetypes = (servers[server_name] or {}).filetypes,
+      cmd = (servers[server_name] or {}).cmd,
     })
   end,
 })
