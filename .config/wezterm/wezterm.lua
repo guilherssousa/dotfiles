@@ -46,6 +46,6 @@ local config = {
 }
 
 -- Set those stuff after object initialization for copy-paste reasons...
-config.color_scheme = "Kanagawa Dragon (Gogh)"
+config.color_scheme = "Dracula (Official)"
 
 return config
