@@ -21,6 +21,7 @@ require('lazy').setup({
   -- no config needed plugins.
 
   -- [[ theme config ]]
+  'Mofiqul/dracula.nvim',
   {
     'rebelot/kanagawa.nvim',
     priority = 1000,
