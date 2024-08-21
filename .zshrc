@@ -2,6 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export BROWSER=firefox
 export TERMINAL=wezterm
+export EDITOR=$(where nvim)
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME=robbyrussell
@@ -88,6 +89,12 @@ export MANWIDTH=80
 
 # add my special scripts folder to path
 export PATH="$PATH:$HOME/.scripts"
+
+# run onefetch with images
+alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
+
+#Php related
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

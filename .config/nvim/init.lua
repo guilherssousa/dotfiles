@@ -26,7 +26,7 @@ require('lazy').setup({
     'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('kanagawa')
+      vim.cmd.colorscheme('dracula')
       -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
       -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
@@ -123,7 +123,7 @@ require('lazy').setup({
   { 'kevinhwang91/nvim-bqf', ft = 'qf' },
 
   -- [[ Copilot ]]
-  {
+  --[[ {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
     event = 'InsertEnter',
@@ -131,7 +131,7 @@ require('lazy').setup({
   {
     'zbirenbaum/copilot-cmp',
     after = { 'copilot.lua' },
-  },
+  }, ]]
 
   -- [[ Um netrw melhor ]]
   'prichrd/netrw.nvim',
@@ -142,6 +142,9 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   'akinsho/nvim-bufferline.lua',
   'stevearc/dressing.nvim',
+
+  -- [[ Markdown viewer ]]
+  { 'OXY2DEV/markview.nvim', lazy = false },
 })
 
 require('set')

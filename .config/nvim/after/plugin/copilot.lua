@@ -1,4 +1,4 @@
-local copilot = require('copilot')
+--[[ local copilot = require('copilot')
 
 copilot.setup({
   suggestion = { enabled = false },
@@ -7,16 +7,16 @@ copilot.setup({
 
 require('copilot_cmp').setup()
 
-local enabled = true
+local enabled = false
 
 vim.keymap.set('n', '<leader>cot', function()
   if enabled then
     enabled = false
     vim.cmd('Copilot disable')
-    print("Copilot disabled")
+    print('Copilot disabled')
   else
     enabled = true
     vim.cmd('Copilot enable')
-    print("Copilot enabled")
+    print('Copilot enabled')
   end
-end, { desc = '[Co]pilot [T]oggle' })
+end, { desc = '[Co]pilot [T]oggle' }) ]]
