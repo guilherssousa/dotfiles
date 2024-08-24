@@ -2,5 +2,9 @@
   "workbench.colorTheme": "Visual Studio Dark",
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontLigatures": true,
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "editor.fontSize": 16,
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.minimap.enabled": false
 }

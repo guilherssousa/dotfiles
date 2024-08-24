@@ -145,6 +145,12 @@ require('lazy').setup({
 
   -- [[ Markdown viewer ]]
   { 'OXY2DEV/markview.nvim', lazy = false },
+
+  -- [[ Golang specific things ]]
+  {
+    'olexsmir/gopher.nvim',
+    ft = 'go',
+  },
 })
 
 require('set')
