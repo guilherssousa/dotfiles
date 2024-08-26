@@ -28,3 +28,5 @@ treesitter.setup({
     enable = true,
   },
 })
+
+vim.treesitter.language.register('dockerfile', 'Dockerfile')
