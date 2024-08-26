@@ -25,6 +25,7 @@ source "$HOME/.cargo/env"
 znap source zsh-users/zsh-syntax-highlighting
 znap source marlonrichert/zsh-autocomplete
 znap source MichaelAquilina/zsh-autoswitch-virtualenv
+znap source joshskidmore/zsh-fzf-history-search
 
 alias cls=clear
 alias qr='qrencode -m 2 -t utf8 <<< "$1"'
