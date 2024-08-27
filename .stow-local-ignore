@@ -24,3 +24,5 @@ _darcs
 
 ^/setup.sh
 ^/.assets
+
+.zshrc.zwc
