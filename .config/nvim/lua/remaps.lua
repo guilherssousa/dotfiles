@@ -26,3 +26,6 @@ remap('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move line up' })
 remap('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move line down' })
 remap('n', '<A-h>', ":m '<-2<CR>gv=gv", { desc = 'Move line left' })
 remap('n', '<A-l>', ":m '>+1<CR>gv=gv", { desc = 'Move line right' })
+
+-- [[ Clear search wiwth <esc> ]]
+remap({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hlsearch' })

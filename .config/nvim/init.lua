@@ -22,11 +22,13 @@ require('lazy').setup({
 
   -- [[ theme config ]]
   'Mofiqul/dracula.nvim',
+  'EdenEast/nightfox.nvim',
+  'Mofiqul/vscode.nvim',
   {
     'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('dracula')
+      vim.cmd.colorscheme('terafox')
       -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
       -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
