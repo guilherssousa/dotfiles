@@ -68,4 +68,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.api.nvim_set_option('clipboard', 'unnamedplus')

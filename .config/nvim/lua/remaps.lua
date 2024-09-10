@@ -29,3 +29,6 @@ remap('n', '<A-l>', ":m '>+1<CR>gv=gv", { desc = 'Move line right' })
 
 -- [[ Clear search wiwth <esc> ]]
 remap({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hlsearch' })
+
+-- [[ Change theme ]]
+remap('n', '<leader>srt', '<cmd>lua SetRandomTheme()<cr><esc>', { desc = '[S]et [R]andom [T]heme' })
