@@ -69,3 +69,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_set_option('clipboard', 'unnamedplus')
+
+-- Display help pages on a horizontal viewport
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'help', 'man' },
+  command = 'wincmd L',
+})

@@ -27,6 +27,9 @@ require('lazy').setup({
   'rebelot/kanagawa.nvim',
   'rose-pine/neovim',
   'blazkowolf/gruber-darker.nvim',
+  'navarasu/onedark.nvim',
+  'craftzdog/solarized-osaka.nvim',
+  'ofirgall/ofirkai.nvim',
 
   -- make it transparent!
   'xiyaowong/transparent.nvim',

@@ -71,7 +71,7 @@ local servers = {
   pyright = {},
   -- ruff_lsp = {},
   -- rust_analyzer = {},
-  tsserver = {},
+  ts_ls = {},
   eslint = {},
   marksman = { filetypes = { 'md', 'mdx' } },
   tailwindcss = {},
