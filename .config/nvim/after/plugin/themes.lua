@@ -10,6 +10,8 @@ local themes = {
   'ofirkai',
 }
 
+local enable_random_theme = false
+
 -- [[ Set a random theme on startup ]]
 
 function SetRandomTheme()
@@ -19,7 +21,11 @@ function SetRandomTheme()
   vim.notify('Session theme set to ' .. session_theme, vim.log.levels.INFO)
 end
 
-SetRandomTheme()
+if enable_random_theme then
+  SetRandomTheme()
+else
+  vim.cmd.colorscheme('gruber-darker')
+end
 
 -- [[ Create command to randomize theme ]]
 
