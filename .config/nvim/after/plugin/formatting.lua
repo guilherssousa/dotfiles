@@ -16,6 +16,7 @@ conform.setup({
     lua = { 'stylua' },
     rust = { 'rustfmt' },
     go = { 'gofmt', 'goimports' },
+    blade = { 'blade-formatter' },
   },
   format_on_save = {
     lsp_fallback = true,

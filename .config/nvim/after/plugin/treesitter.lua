@@ -30,3 +30,21 @@ treesitter.setup({
 })
 
 vim.treesitter.language.register('dockerfile', 'Dockerfile')
+
+-- Neovim Laravel Blade specific things
+local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_config.blade = {
+  install_info = {
+    url = 'https://github.com/EmramMR/tree-sitter-blade',
+    files = { 'src/parser.c' },
+    branch = 'main',
+  },
+  filetype = 'blade',
+}
+
+vim.filetype.add({
+  pattern = {
+    ['.*%.blade%.php'] = 'blade',
+  },
+})
