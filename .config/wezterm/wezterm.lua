@@ -5,7 +5,7 @@ local config = {
 	enable_tab_bar = false,
 
 	-- # Font Options
-	font = wezterm.font("Maple Mono"),
+	font = wezterm.font("Iosevka NerdFont"),
 	font_size = 18.0,
 
 	-- # Background options
