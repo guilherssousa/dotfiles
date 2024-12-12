@@ -24,7 +24,7 @@ end
 if enable_random_theme then
   SetRandomTheme()
 else
-  vim.cmd.colorscheme('gruber-darker')
+  vim.cmd.colorscheme('kanagawa-wave')
 end
 
 -- [[ Create command to randomize theme ]]
