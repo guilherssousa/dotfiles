@@ -8,6 +8,7 @@ local themes = {
   'onedark',
   'solarized-osaka',
   'ofirkai',
+  'nightfox',
 }
 
 local enable_random_theme = false
@@ -24,7 +25,7 @@ end
 if enable_random_theme then
   SetRandomTheme()
 else
-  vim.cmd.colorscheme('kanagawa-wave')
+  vim.cmd.colorscheme('nightfox')
 end
 
 -- [[ Create command to randomize theme ]]

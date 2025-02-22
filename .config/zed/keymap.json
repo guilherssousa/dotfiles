@@ -7,5 +7,11 @@
       "ctrl-d": ["vim::ScrollPageDown", "editor::ScrollCursorCenter"],
       "ctrl-u": ["vim::ScrollPageUp", "editor::ScrollCursorCenter"]
     }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "b": "editor::ToggleComments"
+    }
   }
 ]
