@@ -8,10 +8,10 @@ local config = {
 	font = wezterm.font("JetBrainsMonoNL Nerd Font", {
 		weight = "Bold",
 	}),
-	font_size = 14.0,
+	font_size = 11.0,
 
 	-- # Background options
-	window_background_opacity = 0.93,
+	window_background_opacity = 1,
 	win32_system_backdrop = "Acrylic",
 
 	-- # Dismiss annoying warning

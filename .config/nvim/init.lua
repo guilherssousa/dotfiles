@@ -1,3 +1,8 @@
+--[[ -- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1 ]]
+
+--
 -- [[ Real important to configure this first ]]
 vim.g.mapleader = ' '
 
@@ -142,6 +147,11 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   'akinsho/nvim-bufferline.lua',
   'stevearc/dressing.nvim',
+  'nvim-tree/nvim-tree.lua',
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+  },
 
   -- [[ Markdown viewer ]]
   { 'OXY2DEV/markview.nvim', lazy = false },
