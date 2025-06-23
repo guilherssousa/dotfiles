@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export BROWSER=firefox
+export BROWSER=google-chrome
 export TERMINAL=wezterm
 export EDITOR=$(where nvim)
 
@@ -65,9 +65,6 @@ eval "$(zoxide init zsh)"
 # alias nvim to vim
 alias vim=nvim
 
-# alias nvim to vim
-alias vim=nvim
-
 #alias cat to batcat
 alias bat=batcat
 
@@ -76,7 +73,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 # add nvim to path
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # command aliases
 alias tks="tmux kill-server"
@@ -100,3 +97,4 @@ alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

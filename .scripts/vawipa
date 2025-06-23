@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Define the directory to search
+SEARCH_DIR="."
+
+# Use find and grep to identify problematic filenames
+find "$SEARCH_DIR" -type f | grep -E \
+  "(.*[\/\*\?\>\<\|\:\"\^\$\&\(\)\[\]\{\}\=\;\'\,].*)|\
+   (.*[\. ]$)|\
+   (^\.+$)|\
+   (^[ ]+$)|\
+   (^[0-9]+$)|\
+   (^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$)|\
+   (^.+\..{251,}$)"
+

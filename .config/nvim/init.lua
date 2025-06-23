@@ -147,7 +147,6 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   'akinsho/nvim-bufferline.lua',
   'stevearc/dressing.nvim',
-  'nvim-tree/nvim-tree.lua',
   {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',

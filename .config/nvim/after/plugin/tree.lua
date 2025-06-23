@@ -1,4 +1,4 @@
-local tree = require('nvim-tree')
+--[[ local tree = require('nvim-tree')
 local api = require('nvim-tree.api')
 
 tree.setup({
@@ -14,4 +14,4 @@ tree.setup({
   on_attach = function(bufnr)
     vim.keymap.set('n', '<leader>tf', api.tree.toggle, { buffer = bufnr, desc = '[T]oggle [F]ile Tree' })
   end,
-})
+}) ]]
