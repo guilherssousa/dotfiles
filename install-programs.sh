@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
 command_exists() {
   command -v "$@" >/dev/null 2>&1
@@ -12,7 +12,6 @@ else
   echo "NVM is already installed"
 fi
 
-zsh
 source .zshrc
 
 nvm install lts
