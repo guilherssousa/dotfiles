@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = {
 	-- # Cosmetic Options (https://wezfurlong.org/wezterm/colorschemes/)
-	enable_tab_bar = false,
+	enable_tab_bar = true,
 
 	-- # Font Options
 	font = wezterm.font("JetBrainsMonoNL Nerd Font", {
