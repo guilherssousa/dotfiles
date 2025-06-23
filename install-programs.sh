@@ -12,6 +12,9 @@ else
   echo "NVM is already installed"
 fi
 
+zsh
+source .zshrc
+
 nvm install lts
 nvm use lts
 node -v
