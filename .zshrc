@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 # Znap Installs
 znap source zsh-users/zsh-syntax-highlighting
