@@ -66,6 +66,7 @@ if ! command_exists nvim; then
   sudo rm -rf /opt/nvim 
   sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
   echo "Neovim installed"
+  rm nvim-linux-x86_64.tar.gz
 
   echo "Installing neovim config dependencies: fzf, ripgrep, clang"
   sudo dnf install fzf ripgrep clang -y
