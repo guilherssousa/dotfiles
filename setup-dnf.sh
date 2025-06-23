@@ -15,13 +15,12 @@ if ! command_exists git; then
   echo -e "\nInstalling git..."
   sudo dnf install git -y
   echo "Git installed"
-
 else
   echo "Git is already installed"
 fi
 
 # Check if GitHub CLI is installed, if not, install github cli
-if ! command_exists git; then
+if ! command_exists gh; then
   echo -e "\nInstalling GitHub CLI..."
   # DNF5 installation commands
   sudo dnf install dnf5-plugins -y 
@@ -51,11 +50,12 @@ if ! command_exists zsh; then
   echo -e "\nInstalling zsh..."
   sudo dnf install zsh -y
   echo -e "\Installing Oh my zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unnatended
   echo -e "\nInstalling zsh utilities..."
   sudo dnf copr enable varlad/onefetch
   sudo dnf install neofetch onefetch zoxide -y
   zsh --version
+  sudo chsh $(which zsh)
 fi
 
 
