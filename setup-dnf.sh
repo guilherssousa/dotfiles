@@ -53,7 +53,7 @@ if ! command_exists zsh; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
   echo -e "\nInstalling zsh utilities..."
   sudo dnf copr enable varlad/onefetch -y
-  sudo dnf install neofetch onefetch zoxide -y
+  sudo dnf install neofetch onefetch zoxide -y --skip-unavailable
   zsh --version
   sudo chsh -s $(which zsh)
 fi
