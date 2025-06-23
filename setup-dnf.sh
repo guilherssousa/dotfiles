@@ -55,7 +55,7 @@ if ! command_exists zsh; then
   sudo dnf copr enable varlad/onefetch -y
   sudo dnf install neofetch onefetch zoxide -y --skip-unavailable
   zsh --version
-  sudo chsh -s $(which zsh)
+  sudo chsh -s $(which zsh) $USER
 fi
 
 
