@@ -64,7 +64,7 @@ if ! command_exists nvim; then
   echo -e "\nInstalling neovim..."
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
   sudo rm -rf /opt/nvim 
-  sudo tar -C /opt -xzf nvim-linux64.tar.gz
+  sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
   echo "Neovim installed"
 
   echo "Installing neovim config dependencies: fzf, ripgrep, clang"
