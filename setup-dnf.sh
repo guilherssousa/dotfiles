@@ -72,3 +72,8 @@ if ! command_exists nvim; then
   sudo dnf install fzf ripgrep clang -y
   echo "Dependencies installed sucessfuly"
 fi
+
+cp .specifics.example .specifics
+echo -e "\n✅ Completed! Now:"
+echo -e "\nOpen `.specifics` and define the relevant variables for your environment."
+echo -e "\nRestart your terminal and run `install_programs.sh`."
