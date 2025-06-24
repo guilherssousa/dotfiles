@@ -1,17 +1,17 @@
---[[ local tree = require('nvim-tree')
-local api = require('nvim-tree.api')
+local neotree = require('neo-tree')
 
-tree.setup({
-  sort = {
-    sorter = 'case_sensitive',
+neotree.setup({
+  source_selector = {
+    statusline = false,
   },
-  view = {
-    width = 30,
+  filesystem = {
+    window = {
+      position = 'right',
+      mappings = {
+        ['<C-b>'] = 'close_window',
+      },
+    },
   },
-  renderer = {
-    group_empty = true,
-  },
-  on_attach = function(bufnr)
-    vim.keymap.set('n', '<leader>tf', api.tree.toggle, { buffer = bufnr, desc = '[T]oggle [F]ile Tree' })
-  end,
-}) ]]
+})
+
+vim.keymap.set('n', '<C-b>', ':Neotree reveal right<cr>', { desc = 'toggle file tree', silent = true })

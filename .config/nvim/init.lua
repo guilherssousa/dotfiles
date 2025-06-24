@@ -160,6 +160,15 @@ require('lazy').setup({
     'olexsmir/gopher.nvim',
     ft = 'go',
   },
+
+  -- [[ File explorer ]]
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    version = '*',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+    },
+  },
 })
 
 require('set')
