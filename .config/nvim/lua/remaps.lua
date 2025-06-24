@@ -32,3 +32,6 @@ remap({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hls
 
 -- [[ Change theme ]]
 remap('n', '<leader>srt', '<cmd>lua SetRandomTheme()<cr><esc>', { desc = '[S]et [R]andom [T]heme' })
+
+-- [[ Open on File Explorer ]]
+remap('n', '<leader>ofe', '<cmd>!$EXPLORER .<cr><esc>', { desc = '[O]pen on [F]ile [E]xplorer' })
