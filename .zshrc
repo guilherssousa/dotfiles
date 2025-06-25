@@ -61,14 +61,14 @@ alias tks="tmux kill-server"
 
 # Exports
 GOPATH="$HOME/go"
-PATH=$PATH:/usr/local/go/bin
-PATH="$PATH:$HOME/.scripts"
+PATH="$PATH:/usr/local/go/bin:$HOME/.scripts:$GOPATH/bin"
 
 # Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
 
 # Define Neovim as default Editor
+PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 EDITOR=$(where nvim)
 
 # Node Version Manager
