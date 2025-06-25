@@ -152,9 +152,6 @@ require('lazy').setup({
     event = 'VimEnter',
   },
 
-  -- [[ Markdown viewer ]]
-  { 'OXY2DEV/markview.nvim', lazy = false },
-
   -- [[ Golang specific things ]]
   {
     'olexsmir/gopher.nvim',
