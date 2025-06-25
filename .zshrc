@@ -1,104 +1,60 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-export BROWSER=google-chrome
-export TERMINAL=wezterm
-export EDITOR=$(where nvim)
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=robbyrussell
+# Set the directory we want to store zinit and plugins
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# Download Znap, if it's not there yet.
-[[ -r ~/.config/Repos/znap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.config/Repos/znap
-source ~/.config/Repos/znap/znap.zsh  # Start Znap
+# Download Zinit, if it's not there yet
+if [ ! -d "$ZINIT_HOME" ]; then
+   mkdir -p "$(dirname $ZINIT_HOME)"
+   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
 
-plugins=(git)
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
 
-source $ZSH/oh-my-zsh.sh
+# Add in Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# User configuration
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
 
-# source "$HOME/.cargo/env"
+zinit cdreplay -q
 
-# Znap Installs
-znap source zsh-users/zsh-syntax-highlighting
-znap source marlonrichert/zsh-autocomplete
-znap source MichaelAquilina/zsh-autoswitch-virtualenv
-znap source joshskidmore/zsh-fzf-history-search
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias cls=clear
-alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
-export GOPATH="$HOME/go"
-export PATH="/usr/local/go/bin:$GOPATH:$GOPATH/bin:/home/gui/.local/bin:$PATH"
-export WINTERMPATH="$HOME/.config/winterm"
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-#nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-#nvm end
+# Aliases
+alias ls='ls --color'
+alias vim='nvim'
+alias c='clear'
 
-# pnpm
-export PNPM_HOME="/home/gui/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# bun completions
-[ -s "/home/gui/.bun/_bun" ] && source "/home/gui/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Python
-alias python=python3
-alias pip=pip3
-
-# zoxide
-export PATH="$PATH:/home/gui/.local/bin"
-eval "$(zoxide init zsh)"
-
-# alias nvim to vim
-alias vim=nvim
-
-#alias cat to batcat
-alias bat=batcat
-
-# golang related
-export PATH=$PATH:/usr/local/go/bin
-
-# add nvim to path
-
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
-# command aliases
-alias tks="tmux kill-server"
-alias opl="netstat -tulpn | grep LISTEN"
-alias rsx="sudo service lightdm restart"
-alias focus="sudo hostctl toggle focus"
-
-# Use neovim for man pages
-export MANPAGER="$(where nvim) +Man!"
-export MANWIDTH=80
-
-# add my special scripts folder to path
-export PATH="$PATH:$HOME/.scripts"
-
-# run onefetch with images
-alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
-
-#Php related
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Source SO machine specifics
-source ~/.dotfiles/.specifics
-
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
