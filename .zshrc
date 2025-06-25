@@ -8,7 +8,7 @@ fi
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# Download Zinit, if it's not there yet
+# Download Zinit, if it"s not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
@@ -44,17 +44,44 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+zstyle ":completion:*" menu no
+zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
+zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
-alias ls='ls --color'
-alias vim='nvim'
-alias c='clear'
+alias ls="ls --color"
+alias vim="nvim"
+alias cls="clear"
+alias python="python3"
+alias pip="pip3"
+alias bat="batcat"
+alias tks="tmux kill-server"
+
+# Exports
+GOPATH="$HOME/go"
+PATH=$PATH:/usr/local/go/bin
+PATH="$PATH:$HOME/.scripts"
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Define Neovim as default Editor
+EDITOR=$(where nvim)
+
+# Node Version Manager
+NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Bun
+[ -s "/home/gui/.bun/_bun" ] && source "/home/gui/.bun/_bun"
+BUN_INSTALL="$HOME/.bun"
+PATH="$BUN_INSTALL/bin:$PATH"
+
+# OneFetch with Images
+alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
+
+# Machine-specific environment variables
+source ~/.dotfiles/.specifics

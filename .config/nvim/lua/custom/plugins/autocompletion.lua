@@ -18,6 +18,7 @@ return {
       opts = {},
     },
     'folke/lazydev.nvim',
+    'nvim-tree/nvim-web-devicons',
   },
   --- @module 'blink.cmp'
   --- @type blink.cmp.Config
