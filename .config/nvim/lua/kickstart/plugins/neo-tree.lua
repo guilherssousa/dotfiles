@@ -11,13 +11,26 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<C-b>', ':Neotree reveal right<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
     filesystem = {
+      filtered_items = {
+        visible = true,
+        show_hidden_count = true,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        hide_by_name = {
+          '.git',
+          '.DS_Store',
+          'thumbs.db',
+        },
+        never_show = {},
+      },
       window = {
+        position = 'right',
         mappings = {
-          ['\\'] = 'close_window',
+          ['<C-b>'] = 'close_window',
         },
       },
     },
