@@ -29,6 +29,8 @@ return {
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
+
+      'onsails/lspkind.nvim',
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -272,5 +274,5 @@ return {
         },
       }
     end,
-  }
+  },
 }
