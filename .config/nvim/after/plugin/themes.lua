@@ -25,7 +25,7 @@ end
 if enable_random_theme then
   SetRandomTheme()
 else
-  vim.cmd.colorscheme('nightfox')
+  vim.cmd.colorscheme('rose-pine')
 end
 
 -- [[ Create command to randomize theme ]]

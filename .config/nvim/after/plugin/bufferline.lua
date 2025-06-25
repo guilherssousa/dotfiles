@@ -8,6 +8,9 @@ require('bufferline').setup({
     },
     always_show_bufferline = false,
     separator_style = 'thin',
+    custom_filter = function(buf_number)
+      return vim.bo[buf_number].buftype ~= 'terminal'
+    end,
   },
 })
 
