@@ -49,7 +49,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     local dropdown = require('telescope.themes').get_dropdown(dropdown_options)
 
     -- Changed by gui
-    vim.keymap.set('n', '<leader>ff', function()
+    vim.keymap.set('n', '<leader>sf', function()
       builtin.find_files(dropdown)
     end, { desc = '[S]earch [F]iles' })
 

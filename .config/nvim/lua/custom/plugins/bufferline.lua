@@ -2,16 +2,19 @@ return {
   'akinsho/bufferline.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   version = '*',
+  event = 'VeryLazy',
   opts = {
     options = {
-      mode = 'buffers',
+      mode = 'tabs',
       diagnostics = 'nvim_lsp',
       hover = {
         enabled = true,
         delay = 200,
       },
+      show_buffer_icons = true,
       always_show_bufferline = false,
-      separator_style = 'thin',
+      show_close_icon = false,
+      separator_style = 'slant',
       custom_filter = function(buf_number)
         return vim.bo[buf_number].buftype ~= 'terminal'
       end,
