@@ -25,6 +25,13 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
+# Add in snippets
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+
+# Load completions
+autoload -Uz compinit && compinit
+
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
