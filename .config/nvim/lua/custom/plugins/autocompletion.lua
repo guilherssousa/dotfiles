@@ -4,6 +4,10 @@ return {
   event = 'VimEnter',
   version = '1.*',
   dependencies = {
+    {
+      'nvim-tree/nvim-web-devicons',
+      enabled = true,
+    },
     -- Snippet Engine
     {
       'L3MON4D3/LuaSnip',
@@ -18,7 +22,6 @@ return {
       opts = {},
     },
     'folke/lazydev.nvim',
-    'nvim-tree/nvim-web-devicons',
   },
   --- @module 'blink.cmp'
   --- @type blink.cmp.Config
