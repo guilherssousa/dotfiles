@@ -83,7 +83,7 @@ PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 EDITOR=$(where nvim)
 
 # Node Version Manager
-NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Bun
@@ -96,3 +96,4 @@ alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
 
 # Machine-specific environment variables
 source ~/.dotfiles/.specifics
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
