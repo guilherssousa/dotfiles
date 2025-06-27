@@ -54,7 +54,11 @@ return {
       documentation = { auto_show = false, auto_show_delay_ms = 500 },
       menu = {
         draw = {
-          padding = { 0, 1 },
+          padding = { 1, 1 },
+          columns = {
+            { 'kind_icon', 'label', 'label_description', gap = 1 },
+            { 'kind' },
+          },
           components = {
             kind_icon = {
               text = function(ctx)
