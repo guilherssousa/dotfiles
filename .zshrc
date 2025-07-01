@@ -69,6 +69,9 @@ alias python="python3"
 alias pip="pip3"
 alias bat="batcat"
 alias tks="tmux kill-server"
+# OneFetch with Images
+alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
+alias neofetch="cls && fastfetch"
 
 # Exports
 GOPATH="$HOME/go"
@@ -90,9 +93,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "/home/gui/.bun/_bun" ] && source "/home/gui/.bun/_bun"
 BUN_INSTALL="$HOME/.bun"
 PATH="$BUN_INSTALL/bin:$PATH"
-
-# OneFetch with Images
-alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
 
 # Machine-specific environment variables
 source ~/.dotfiles/.specifics
