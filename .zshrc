@@ -72,7 +72,6 @@ alias tks="tmux kill-server"
 # OneFetch with Images
 alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
 alias neofetch="cls && fastfetch"
-alias cursor="nohup ~/.local/bin/Cursor.AppImage $@ > /dev/null 2>&1 &"
 
 # Exports
 GOPATH="$HOME/go"
@@ -102,3 +101,5 @@ PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Machine-specific environment variables
 source ~/.dotfiles/.specifics
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
