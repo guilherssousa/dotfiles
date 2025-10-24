@@ -49,14 +49,18 @@ fi
 # Check if `neovim` is installed, if not, install and configure zsh
 if ! command_exists nvim; then
   echo -e "\nInstalling neovim..."
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
   sudo rm -rf /opt/nvim 
-  sudo tar -C /opt -xzf nvim-linux64.tar.gz
+  sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
   echo "Neovim installed"
+  rm nvim-linux-x86_64.tar.gz
 
   echo "Installing neovim config dependencies: fzf, ripgrep, clang"
   sudo apt install fzf ripgrep clang -y
   echo "Dependencies installed sucessfuly"
 fi
 
-
+cp .specifics.example .specifics
+echo -e "\n✅ Completed! Now:"
+echo -e "\nOpen `.specifics` and define the relevant variables for your environment."
+echo -e "\nRestart your terminal and run `install_programs.sh`."
