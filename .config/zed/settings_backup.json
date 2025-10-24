@@ -8,11 +8,12 @@
 // from the command palette or from `Zed` application menu.
 {
   "icon_theme": "Material Icon Theme",
-  "agent": {
+  "assistant": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-3.5-turbo"
     },
+    "version": "2"
   },
   "project_panel": {
     "dock": "right"
@@ -29,7 +30,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Gruvbox Light Soft"
   },
   "relative_line_numbers": true,
   "features": {

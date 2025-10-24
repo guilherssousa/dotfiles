@@ -7,6 +7,7 @@ return {
   'navarasu/onedark.nvim',
   'craftzdog/solarized-osaka.nvim',
   'ofirgall/ofirkai.nvim',
+  'projekt0n/github-nvim-theme',
   {
     'rose-pine/neovim',
     init = function()
@@ -37,7 +38,7 @@ return {
       if enable_random_theme then
         SetRandomTheme()
       else
-        vim.cmd.colorscheme 'rose-pine'
+        vim.cmd.colorscheme 'github_dark_dimmed'
       end
 
       -- [[ Create command to randomize theme ]]

@@ -72,10 +72,11 @@ alias tks="tmux kill-server"
 # OneFetch with Images
 alias of="cls && onefetch --image ~/.dotfiles/.assets/haerin.jpg"
 alias neofetch="cls && fastfetch"
+alias cursor="nohup ~/.local/bin/Cursor.AppImage $@ > /dev/null 2>&1 &"
 
 # Exports
 GOPATH="$HOME/go"
-PATH="$PATH:/usr/local/go/bin:$HOME/.scripts:$GOPATH/bin"
+PATH="$PATH:/usr/local/go/bin:$HOME/.scripts:$GOPATH/bin:$HOME/.local/bin"
 
 # Shell integrations
 source <(fzf --zsh)
@@ -86,14 +87,18 @@ PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 EDITOR=$(where nvim)
 
 # Node Version Manager
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
 # Bun
 [ -s "/home/gui/.bun/_bun" ] && source "/home/gui/.bun/_bun"
 BUN_INSTALL="$HOME/.bun"
 PATH="$BUN_INSTALL/bin:$PATH"
 
+# Fly.io
+FLYCTL_INSTALL="/home/gui/.fly"
+PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # Machine-specific environment variables
 source ~/.dotfiles/.specifics
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

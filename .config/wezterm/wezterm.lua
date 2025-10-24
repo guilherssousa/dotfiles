@@ -8,10 +8,10 @@ local config = {
 	font = wezterm.font("JetBrainsMonoNL Nerd Font", {
 		weight = "Bold",
 	}),
-	font_size = 11.0,
+	font_size = 12.0,
 
 	-- # Background options
-	window_background_opacity = 1,
+	window_background_opacity = 0.9,
 	win32_system_backdrop = "Acrylic",
 
 	-- # Dismiss annoying warning
@@ -49,5 +49,49 @@ local config = {
 
 -- Set those stuff after object initialization for copy-paste reasons...
 config.color_scheme = "Dracula (Official)"
+config.hyperlink_rules = wezterm.default_hyperlink_rules()
+
+function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Builtin Solarized Dark"
+	else
+		return "Builtin Solarized Light"
+	end
+end
+
+function query_appearance_gnome()
+	local success, stdout = wezterm.run_child_process({
+		"gsettings",
+		"get",
+		"org.gnome.desktop.interface",
+		"gtk-theme",
+	})
+	-- lowercase and remove whitespace
+	stdout = stdout:lower():gsub("%s+", "")
+	local mapping = {
+		highcontrast = "LightHighContrast",
+		highcontrastinverse = "DarkHighContrast",
+		adwaita = "Light",
+		["adwaita-dark"] = "Dark",
+	}
+	local appearance = mapping[stdout]
+	if appearance then
+		return appearance
+	end
+	if stdout:find("dark") then
+		return "Dark"
+	end
+	return "Light"
+end
+
+wezterm.on("update-right-status", function(window, pane)
+	local overrides = window:get_config_overrides() or {}
+	local appearance = query_appearance_gnome()
+	local scheme = scheme_for_appearance(appearance)
+	if overrides.color_scheme ~= scheme then
+		overrides.color_scheme = scheme
+		window:set_config_overrides(overrides)
+	end
+end)
 
 return config
