@@ -7,32 +7,73 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "icon_theme": "Material Icon Theme",
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+  "base_keymap": "VSCode",
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "gutter": {
+    "line_numbers": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": false,
+      "vertical": false,
+    },
+  },
+  "current_line_highlight": "gutter",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-3.5-turbo"
+      "model": "gpt-3.5-turbo",
     },
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "vim_mode": true,
   "ui_font_size": 18,
-  "buffer_font_size": 14.0,
-  "buffer_font_weight": 800,
+  "buffer_font_size": 16.0,
+  "buffer_font_weight": 700.0,
   "buffer_line_height": { "custom": 1.4 },
   "ui_font_family": "JetBrainsMonoNL Nerd Font",
-  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "auto_signature_help": false,
   "show_signature_help_after_edits": false,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
-  "relative_line_numbers": true,
+  "theme": "Ayu Darker",
+  "relative_line_numbers": "enabled",
   "features": {
-    "copilot": true
-  }
+    "copilot": true,
+  },
+  "languages": {
+    "TypeScript": {
+      "language_servers": ["tsgo"],
+      "format_on_save": true,
+      "formatter": {
+        "prettier": {
+          "allowed": true,
+        },
+      },
+    },
+  },
 }
