@@ -101,3 +101,5 @@ PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Machine-specific environment variables
 source ~/.dotfiles/.specifics
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
