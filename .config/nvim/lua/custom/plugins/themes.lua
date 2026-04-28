@@ -9,6 +9,15 @@ return {
   'ofirgall/ofirkai.nvim',
   'projekt0n/github-nvim-theme',
   {
+    'xiyaowong/transparent.nvim',
+    opts = {
+      extra_groups = {
+        'NormalFloat',
+        'NvimTreeNormal',
+      },
+    },
+  },
+  {
     'rose-pine/neovim',
     init = function()
       local themes = {
@@ -38,7 +47,7 @@ return {
       if enable_random_theme then
         SetRandomTheme()
       else
-        vim.cmd.colorscheme 'github_dark_dimmed'
+        vim.cmd.colorscheme 'gruber-darker'
       end
 
       -- [[ Create command to randomize theme ]]

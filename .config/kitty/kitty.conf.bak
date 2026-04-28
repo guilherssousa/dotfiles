@@ -1,8 +1,7 @@
 # vim:fileencoding=utf-8
 
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMonoNL Nerd Font Mono"
-font_size        16.0
+font_family      family="ComicShannsMono Nerd Font Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -28,7 +27,7 @@ bold_italic_font auto
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-#: font_size 16.0
+font_size 16.0
 
 #: Font size (in pts).
 
@@ -1124,7 +1123,7 @@ bold_italic_font auto
 #: to be pts. Note that borders are displayed only when more than one
 #: window is visible. They are meant to separate multiple windows.
 
-# draw_minimal_borders yes
+draw_minimal_borders yes
 
 #: Draw only the minimum borders needed. This means that only the
 #: borders that separate the window from a neighbor are drawn. Note
@@ -1593,7 +1592,7 @@ bold_italic_font auto
 
 #: The foreground and background colors.
 
-# background_opacity 1.0
+background_opacity 0.8
 
 #: The opacity of the terminal background color. A number between zero
 #: and one, where one is opaque and zero is fully transparent. This
@@ -1623,7 +1622,7 @@ bold_italic_font auto
 #: will only work if dynamic_background_opacity was enabled in the
 #: original config.
 
-# background_blur 0
+background_blur 64
 
 #: Set to a positive value to enable background blur (blurring of the
 #: visuals behind a transparent window) on platforms that support it.
@@ -1658,7 +1657,7 @@ bold_italic_font auto
 #: Note that you must also set background_opacity to something less
 #: than 1 for this setting to work properly.
 
-# dynamic_background_opacity no
+dynamic_background_opacity true
 
 #: Allow changing of the background_opacity dynamically, using either
 #: keyboard shortcuts (increase_background_opacity and
